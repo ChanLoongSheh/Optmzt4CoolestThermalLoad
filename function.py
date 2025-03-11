@@ -73,13 +73,15 @@ def dr(x, extr, I, step=1):
 def NLcnstrnt(x, flag, extr, tri_val, coordinate, I, step=1):
     if flag == 0:
         if type(x) == np.ndarray:
-            r = x  # 这里的x只有反射率，无截止波长
+            r = x  # The x here only has reflectance and no cutoff wavelength
         else:
             x = np.asarray(x)
-            r = x  # 这里的x只有反射率，无截止波长
+            r = x  # The x here only has reflectance and no cutoff wavelength
     else:
         if type(x) == np.ndarray:
-            r, _, _ = dr(x, extr, I, step=step)  # 这里传入的x数组，其最后一个元素代表了吸收截止波长，dr(x)返回的数组只含有反射率，且为已经增量的反射率
+            # The x array passed here has its last element representing the absorption cutoff wavelength, and dr (x)
+            # returns an array containing only the reflectance, which has already been incremented
+            r, _, _ = dr(x, extr, I, step=step)
         else:
             x = np.asarray(x)
             r, _, _ = dr(x, extr, I, step=step)
@@ -94,7 +96,6 @@ def NLcnstrnt(x, flag, extr, tri_val, coordinate, I, step=1):
     x = X / (X + Y + Z)
     y = Y / (X + Y + Z)
     d = 1e-8 - ((coordinate[0] - x) ** 2 + (coordinate[1] - y) ** 2)
-    # func = d
     return d
 
 def Delta(r, tri_val, coordinate, step=1):
