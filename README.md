@@ -7,5 +7,13 @@ even paper from Science bulletin considered the objective function totoal therma
 they did not redistribute the absorbed energy to the emission band to calculate the reflectance.
 ACS photonics paper redistributed the energy however ignored the ***LE*** effect
 
-## light extraction induced by energy redistribution
+---
+
+# light extraction induced by energy redistribution
 Here we consider energy redistribution as gaussian distribution calculated by adding one more variable cut-off wavelength lambda
+
+---
+
+# Citation:
+She C, Zhang Y, Dong M, et al. Scattering‐Enhanced Light Extraction for Radiative Thermal Load Mitigation in Fluorescent Films[J]. Advanced Science, 2025, 12(43): e10643.
+https://advanced.onlinelibrary.wiley.com/doi/10.1002/advs.202510643  
